@@ -11,18 +11,17 @@ public class Korpa {
     }
 
     public Artikl[] getArtikli() {
-        return (Artikl[]) artikli.toArray();
+        return (Artikl[]) artikli.toArray(new Artikl[artikli.size()]);
     }
 
     public Artikl izbaciArtiklSaKodom(String kod) {
-        Artikl pomocni = null;
-        for (Artikl a : artikli) {
-            if (a.getKod().equals(kod)) {
-                pomocni = a;
+        for(Artikl a: artikli) {
+            if(a.getKod().equals(kod)) {
                 artikli.remove(a);
+                return a;
             }
         }
-        return pomocni;
+        return null;
     }
 
     public int dajUkupnuCijenuArtikala() {
