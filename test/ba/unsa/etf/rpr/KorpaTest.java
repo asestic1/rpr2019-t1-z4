@@ -58,5 +58,13 @@ class KorpaTest {
         assertEquals(1500, proba.dajUkupnuCijenuArtikala());
     }
 
+    @Test
+    void dodavanjeArtiklaSaIstimKodom() {
+        Korpa proba = new Korpa();
+        proba.dodajArtikl(new Artikl("Mobitel", 500, 12));
+        proba.dodajArtikl(new Artikl("Mobitel", 500, 12));
+        assertEquals(1, proba.velicina());
+    }
+
 
 }

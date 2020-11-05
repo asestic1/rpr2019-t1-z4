@@ -34,9 +34,15 @@ public class Korpa {
         return suma;
     }
 
+    private boolean postojiArtiklSaKodom(String kod) {
+        for(Artikl a: artikli) {
+            if(a.getKod().equals(kod)) return true;
+        }
+        return false;
+    }
 
     public boolean dodajArtikl(Artikl a) {
-        if (artikli.size() < 50) {
+        if (artikli.size() < 50 && !postojiArtiklSaKodom(a.getKod())) {
             artikli.add(a);
             return true;
         }

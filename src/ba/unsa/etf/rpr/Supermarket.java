@@ -13,12 +13,19 @@ public class Supermarket {
         return artikli.toArray(new Artikl[artikli.size()]); //remember this
     }
 
+    private boolean postojiArtiklSaKodom(String kod) {
+        for(Artikl a: artikli) {
+            if(a.getKod().equals(kod)) return true;
+        }
+        return false;
+    }
+
     public int velicina() {
         return artikli.size();
     }
 
     public boolean dodajArtikl(Artikl a) {
-        if(artikli.size() < 1000) {
+        if(artikli.size() < 1000 && !postojiArtiklSaKodom(a.getKod())) {
             artikli.add(a);
             return true;
         }
