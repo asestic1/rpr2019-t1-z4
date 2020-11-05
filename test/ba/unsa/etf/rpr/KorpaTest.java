@@ -15,6 +15,7 @@ class KorpaTest {
     //6. ukupna cijena artikala u korpi za korpu u kojoj nema nijednog artikla
     //7. metodu za dodavanje, kao i metode klase Supermarket, onda ne treba testirati
     //u Supermarket klasi onda samo terba istestirati ono da mu velicina ne smije preci 1000 artikala
+    //treba se promijeniti klasa Korpa tako da ako dva objekta imaju isti kod, ne doyvoljava se dodavanje
 
     @Test
     void testKonstruktoraIDodavanja() {

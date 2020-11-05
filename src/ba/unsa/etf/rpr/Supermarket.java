@@ -10,7 +10,7 @@ public class Supermarket {
     }
 
     public Artikl[] getArtikli() {
-        return artikli.toArray(new Artikl[0]); //remember this
+        return artikli.toArray(new Artikl[artikli.size()]); //remember this
     }
 
     public int velicina() {

@@ -11,7 +11,7 @@ public class Korpa {
     }
 
     public Artikl[] getArtikli() {
-        return artikli.toArray(new Artikl[0]);
+        return artikli.toArray(new Artikl[artikli.size()]); //prealociranje za bolje performanse
     }
 
     public int velicina() {
