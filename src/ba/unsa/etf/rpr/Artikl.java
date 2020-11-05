@@ -25,7 +25,6 @@ public class Artikl {
         return naziv;
     }
 
-
     public String getKod() {
         return Integer.toString(kod);
     }

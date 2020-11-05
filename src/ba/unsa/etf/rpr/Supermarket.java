@@ -10,11 +10,15 @@ public class Supermarket {
     }
 
     public Artikl[] getArtikli() {
-        return (Artikl[]) artikli.toArray(new Artikl[artikli.size()]);
+        return artikli.toArray(new Artikl[0]); //remember this
+    }
+
+    public int velicina() {
+        return artikli.size();
     }
 
     public boolean dodajArtikl(Artikl a) {
-        if(artikli.size() < 50) {
+        if(artikli.size() < 1000) {
             artikli.add(a);
             return true;
         }

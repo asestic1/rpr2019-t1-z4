@@ -66,7 +66,7 @@ public class Main {
                 String kod = scanner.nextLine();
                 kod = scanner.nextLine();
                 if(!kod.equals("c")){
-                    Artikl a = supermarket.izbaciArtiklSaKodom(kod); //ako je kod jednak c, onda se treba artikl izbaciti
+                    Artikl a = supermarket.izbaciArtiklSaKodom(kod); //ovo je uzimanje artikla iz supermarketa
                     if(a != null){
                         if(korpa.dodajArtikl(a)) System.out.println("Artikl dodan u korpu.");
                         else {

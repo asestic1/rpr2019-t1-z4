@@ -4,15 +4,19 @@ import java.util.ArrayList;
 
 public class Korpa {
 
-    private ArrayList<Artikl> artikli;
+    private final ArrayList<Artikl> artikli;
 
     public Korpa() {
         artikli = new ArrayList<Artikl>();
     }
 
     public Artikl[] getArtikli() {
-        return (Artikl[]) artikli.toArray(new Artikl[artikli.size()]);
+        return artikli.toArray(new Artikl[0]);
     }
+
+    public int velicina() {
+        return artikli.size();
+    } //naknadno dodana za potrebe testova
 
     public Artikl izbaciArtiklSaKodom(String kod) {
         for(Artikl a: artikli) {
